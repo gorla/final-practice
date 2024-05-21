@@ -8,13 +8,16 @@ class ListCalculator:
         sum_x = sum(self.x)
         sum_y = sum(self.y)
         
-        assert(sum_x != 0)
         return sum_y / sum_x
 
 # Example usage:
-x_values = [10, 20, 30]
+x_values = [5, -4, -1]
 y_values = [5, 10, 15]
 
 calculator = ListCalculator(x_values, y_values)
-result = calculator.lists_division()
+try:
+    result = calculator.lists_division()
+except ZeroDivisionError:
+    print('infinite!')
+
 print("Result:", result)
