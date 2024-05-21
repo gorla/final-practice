@@ -8,6 +8,7 @@ class ListCalculator:
         sum_x = sum(self.x)
         sum_y = sum(self.y)
         
+        assert(sum_x != 0)
         return sum_y / sum_x
 
 # Example usage:
