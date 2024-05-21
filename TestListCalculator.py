@@ -22,5 +22,13 @@ class TestListCalculator(unittest.TestCase):
 
         self.assertEqual(result, 1)
 
+    def test_list_y_zero(self):
+        # Edge case where sum of x_values is zero
+        y_values = [3, 5, 7]
+        x_values = [5, -4, -1]
+        
+        calculator = ListCalculator(x_values, y_values)
+        result = calculator.lists_division()
+        
 if __name__ == '__main__':
     unittest.main()
